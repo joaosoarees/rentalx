@@ -11,7 +11,7 @@ export class CreateSpecificationController {
       CreateSpecificationUseCase
     );
 
-    createSpecificationUseCase.execute({ name, description });
+    await createSpecificationUseCase.execute({ name, description });
 
     return response.status(201).send();
   }
