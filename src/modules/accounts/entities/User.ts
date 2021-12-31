@@ -22,7 +22,7 @@ export class User {
   driver_license: string;
 
   @Column()
-  is_adming: boolean;
+  is_admin: boolean;
 
   @CreateDateColumn()
   created_at: Date;
