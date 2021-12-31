@@ -9,6 +9,7 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/data/postgres
+      - /usr/src/app/node_modules/
     environment:
       - POSTGRES_DB=rentx
       - POSTGRES_USER=docker
