@@ -11,6 +11,10 @@ export class UsersRepository implements IUsersRepository {
     this.repository = getRepository(User);
   }
 
+  async findById(id: string): Promise<User> {
+    return this.repository.findOne(id);
+  }
+
   async create(data: ICreateUserDTO): Promise<void> {
     const user = this.repository.create(data);
 
